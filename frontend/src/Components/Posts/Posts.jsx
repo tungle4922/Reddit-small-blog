@@ -12,7 +12,8 @@ const Posts = () => {
     useEffect(() => {
         const getAllPosts = async () => {
             try {
-                const res = await axios.get("http://localhost:8080/post")
+                // const res = await axios.get("http://localhost:8080/post")
+                const res = await axios.get("https://redditsmallblog.onrender.com/post")
                 setAllPosts(res.data)
             } catch (error) {
                 console.log(error)

@@ -34,7 +34,8 @@ const EditPage = (props) => {
   useEffect(() => {
     const getProductInfo = async () => {
       try {
-        const res = await axios.get("http://localhost:8080/profile");
+        // const res = await axios.get("http://localhost:8080/profile");
+        const res = await axios.get("https://redditsmallblog.onrender.com/profile");
         setProfileInfo(res.data);
       } catch (error) {
         console.log(error);
@@ -56,7 +57,8 @@ const EditPage = (props) => {
     // updateUser(updatedUser,dispatch)
     try {
       const res = await axios.put(
-        `http://localhost:8080/profile/${profileInfo[0]._id}`,
+        // `http://localhost:8080/profile/${profileInfo[0]._id}`,
+        `https://redditsmallblog.onrender.com/profile/${profileInfo[0]._id}`,
         updatedUser
       );
       window.location.reload(false); //Tải lại trang để refresh database

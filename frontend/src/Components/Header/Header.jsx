@@ -17,7 +17,8 @@ const Header = (props) => {
   useEffect(()=> {
     const getProductInfo = async () => {
       try {
-        const res = await axios.get('http://localhost:8080/profile')
+        // const res = await axios.get('http://localhost:8080/profile')
+        const res = await axios.get('https://redditsmallblog.onrender.com/profile')
         setProfileInfo(res.data);
       } catch (error) {
         console.log(error)

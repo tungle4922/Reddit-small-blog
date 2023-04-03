@@ -27,7 +27,8 @@ const MakePosts = (props) => {
     };
     // dispatch(createPost(newPost));
     try {
-      const res = await axios.post("http://localhost:8080/post", newPost);
+      // const res = await axios.post("http://localhost:8080/post", newPost);
+      const res = await axios.post("https://redditsmallblog.onrender.com/post", newPost);
       window.location.reload(false);
       console.log(res.data);
     } catch (error) {
