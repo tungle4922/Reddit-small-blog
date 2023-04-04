@@ -37,6 +37,7 @@
     padding: 0.25rem 0.5rem 4rem 0.5rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    padding: 15px 25px;
 }
 
 .makepost-tags {
@@ -89,24 +90,35 @@
 }
 
 .posts {
-    background-color: rgb(49, 49, 49);
-    margin-bottom: 1rem;
-    padding: 15px 25px;
+    /* background-color: rgb(49, 49, 49); */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin-top: 1rem;
     font-family: "Noto Sans", sans-serif;
-    /* border-bottom-left-radius: 16px;
-    border-bottom-right-radius: 16px; */
+}
+
+.posts:last-child {
+    margin-bottom: 1rem;
 }
 
 .posts-title {
     font-size: 1.15rem;
     font-weight: 700;
     padding-bottom: 14px;
+    color: #000;
+    padding: 15px 25px;
+}
+
+.posts-description {
+    color: #000;
+    padding: 0 25px 15px 25px;
+    font-size: 0.9rem;
 }
 
 .posts-tags {
     color: white;
     border: none;
-    margin: 0.75rem 0 0.75rem 0;
+    margin: 0.75rem 0 0.75rem 23px;
     font-size: 0.75rem;
     font-family: "Noto Sans", sans-serif;
     border-radius: 14px;
@@ -137,6 +149,7 @@
 
 .post-img {
     width: 100%;
+
 }
 
 .close-wrap {
