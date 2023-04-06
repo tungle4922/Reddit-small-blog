@@ -58,7 +58,7 @@ const EditPage = (props) => {
     try {
       const res = await axios.put(
         // `http://localhost:8080/profile/${profileInfo[0]._id}`,
-        `https://redditsmallblog.onrender.com/profile/${profileInfo[0]._id}`,
+        `https://reddit-small-blog-backend.vercel.app/profile/${profileInfo[0]._id}`,
         updatedUser
       );
       window.location.reload(false); //Tải lại trang để refresh database

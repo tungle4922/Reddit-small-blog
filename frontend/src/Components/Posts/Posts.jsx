@@ -13,7 +13,7 @@ const Posts = () => {
         const getAllPosts = async () => {
             try {
                 // const res = await axios.get("http://localhost:8080/post")
-                const res = await axios.get("https://redditsmallblog.onrender.com/post")
+                const res = await axios.get("https://reddit-small-blog-backend.vercel.app/post")
                 setAllPosts(res.data)
             } catch (error) {
                 console.log(error)
@@ -28,7 +28,7 @@ const Posts = () => {
                 return (
                     <div className="posts" key={idx}>
                         <p className="posts-title">{post.title}</p>
-                        <img alt="not found" className="post-img" src={post.selectedImgUrl} />
+                        <img alt="" className="post-img" src={post.selectedImgUrl} />
                         <p className={`posts-tags-${tags[post.tag]} posts-tags`}>{tags[post.tag]}</p>
                         <p className="posts-description">{post.description}</p>
                     </div>

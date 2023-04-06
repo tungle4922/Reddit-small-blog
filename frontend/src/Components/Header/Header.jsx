@@ -31,7 +31,7 @@ const Header = (props) => {
       try {
         // const res = await axios.get('http://localhost:8080/profile')
         const res = await axios.get(
-          "https://redditsmallblog.onrender.com/profile"
+          "https://reddit-small-blog-backend.vercel.app/profile"
         );
         setProfileInfo(res.data);
         setisLoading(false);
