@@ -12,7 +12,7 @@ function App() {
   const [isOpenPost, setOpen] = useState(false);
   const pending = useSelector((state) => state.user.pending);
   const error = useSelector((state) => state.user.error);
-
+  
   return (
     <div className="App">
       {isEdit ? (

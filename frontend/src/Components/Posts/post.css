@@ -101,6 +101,40 @@
     margin-bottom: 1rem;
 }
 
+.post-row1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.posts-option {
+    margin: 0 12px 12px 0;
+    cursor: pointer;
+    color: #000;
+}
+
+.delete-option {
+    display: none;
+    position: absolute;
+    right: 10px;
+    color: #000;
+    background-color: #fff;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.posts-option-wrap:hover .delete-option{
+    display: block;
+}
+
+.delete-option:hover {
+    background-color: rgb(213, 52, 52);
+    color: #fff;
+}
+
 .posts-title {
     font-size: 1.15rem;
     font-weight: 700;
