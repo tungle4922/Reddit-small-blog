@@ -8,6 +8,12 @@ header {
     left: 0; */
 }
 
+.edit-wrap {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
 .info-edit {
     cursor: pointer;
     align-self: flex-end;

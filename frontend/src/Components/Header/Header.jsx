@@ -42,6 +42,27 @@ const Header = (props) => {
     getProductInfo();
   }, []);
 
+  //set default profile
+  const handleSetDefault = async () => {
+    const defaultUser = {
+      name: "Tung Le",
+      age: "20",
+      about: "I'm student of PTIT school",
+      avaUrl: "https://preview.redd.it/fc9k38jwfwv51.png?auto=webp&s=9ce3d4c488091bb21969fd0fad7a6d89e4bfc50d",
+      themeColor: "#0000ff",
+    };
+    try {
+      const res = await axios.put(
+        `https://reddit-small-blog-backend.vercel.app/profile/${profileInfo[0]._id}`,
+        defaultUser
+      );
+      window.location.reload();
+      console.log(res.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <>
       {isLoading ? (
@@ -62,8 +83,13 @@ const Header = (props) => {
         }}
       >
         <div className="info-container">
-          <div className="info-edit" onClick={handleEdit}>
-            Edit
+          <div className="edit-wrap">
+            <div className="info-edit" onClick={handleEdit}>
+              Edit
+            </div>
+            <div className="info-edit" onClick={handleSetDefault}>
+              Set default
+            </div>
           </div>
           <img src={profileInfo[0].avaUrl} alt="" className="info-ava" />
           <div className="info-username">{profileInfo[0].name}</div>
