@@ -8,7 +8,7 @@ footer {
     display: flex;
     bottom: 0;
     height: 60px;
-    width: 480px;
+    width: 900px;
     margin: 0 auto;
 }
 
@@ -17,7 +17,7 @@ footer {
     cursor: pointer;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 900px) {
     footer {
         width: 100%;
     }
