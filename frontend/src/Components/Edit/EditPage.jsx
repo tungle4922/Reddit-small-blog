@@ -35,7 +35,9 @@ const EditPage = (props) => {
     const getProductInfo = async () => {
       try {
         // const res = await axios.get("http://localhost:8080/profile");
-        const res = await axios.get("https://redditsmallblog.onrender.com/profile");
+        const res = await axios.get(
+          "https://redditsmallblog.onrender.com/profile"
+        );
         setProfileInfo(res.data);
       } catch (error) {
         console.log(error);
@@ -61,7 +63,7 @@ const EditPage = (props) => {
         `https://reddit-small-blog-backend.vercel.app/profile/${profileInfo[0]._id}`,
         updatedUser
       );
-      window.location.reload(false); //Tải lại trang để refresh database
+      window.location.reload();
       console.log(res.data);
     } catch (err) {
       console.log(err);
@@ -78,7 +80,7 @@ const EditPage = (props) => {
               e.preventDefault();
               setEdit(false);
             }}
-            style={{padding: "10px 40px"}}
+            style={{ padding: "10px 40px" }}
           >
             x
           </button>

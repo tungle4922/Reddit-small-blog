@@ -48,7 +48,8 @@ const Header = (props) => {
       name: "Tung Le",
       age: "20",
       about: "I'm student of PTIT school",
-      avaUrl: "https://preview.redd.it/fc9k38jwfwv51.png?auto=webp&s=9ce3d4c488091bb21969fd0fad7a6d89e4bfc50d",
+      avaUrl:
+        "https://preview.redd.it/fc9k38jwfwv51.png?auto=webp&s=9ce3d4c488091bb21969fd0fad7a6d89e4bfc50d",
       themeColor: "#0000ff",
     };
     try {
@@ -65,17 +66,6 @@ const Header = (props) => {
 
   return (
     <>
-      {isLoading ? (
-        <Backdrop
-          sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
-          open={true}
-        >
-          <CircularProgress color="inherit" />
-        </Backdrop>
-      ) : (
-        ""
-      )}
-
       <header
         style={{
           backgroundColor: `${profileInfo[0].themeColor}`,
